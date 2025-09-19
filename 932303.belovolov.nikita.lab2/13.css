@@ -1,0 +1,40 @@
+#main {
+    display: flex;
+    background-color: aqua;
+    border: 2px solid forestgreen;
+}
+#menu {
+    background-color: bisque;
+    padding: 10px 30px 10px 0;
+}
+#sideBlock {
+    flex-shrink: 0;
+    width: 400px;
+}
+ul {
+    margin: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+#textContent {
+    background-color: darkgray;
+}
+#imageAndText {
+    overflow: hidden;
+}
+img {
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 1000px) {
+    #sideBlock {
+        width: fit-content;
+    }
+    img {
+        width: 200px;
+    }
+}

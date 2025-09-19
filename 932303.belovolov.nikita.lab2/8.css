@@ -1,0 +1,31 @@
+#main {
+    display: flex;
+}
+#menu {
+    background-color: bisque;
+    padding: 10px 5px;
+}
+#sideBlock {
+    background-color: aqua;
+    flex-shrink: 0;
+    width: 200px;
+}
+ul {
+    margin: 0;
+}
+footer {
+    background-color: limegreen;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.darkgray-bg {
+    background-color: darkgray;
+}

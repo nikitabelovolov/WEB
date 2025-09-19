@@ -1,0 +1,37 @@
+#main {
+    display: flex;
+    background-color: aqua;
+    border: 2px solid forestgreen;
+}
+#menu {
+    background-color: bisque;
+    padding: 10px 30px 10px 0;
+}
+#sideBlock {
+    flex-shrink: 0;
+    padding-right: 5px;
+    width: 400px;
+}
+ul {
+    margin: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+#textContent {
+    background-color: darkgray;
+}
+
+@media (max-width: 800px) {
+    #sideBlock {
+        width: fit-content;
+    }
+    #main {
+        display: block;
+    }
+    #textContent {
+        max-width: 500px;
+    }
+}

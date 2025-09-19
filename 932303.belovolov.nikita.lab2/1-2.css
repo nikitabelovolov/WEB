@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0;
+}
+* {
+    line-height: 1.3;
+}
+
+header {
+    background-color: #eaeaea;
+    padding-bottom: 20px;
+}
+header > h1 {
+    margin: 0;
+}
+
+.green-bg {
+    background-color: #c8fc98;
+}
+.yellow-bg {
+    background-color: #fde95e;
+}
+.red-text {
+    color: red;
+}
+
+#main {
+    display: flex;
+}
+#main > div {
+    padding: 10px;
+    height: fit-content;
+}
+.max-25 {
+    max-width: 25%;
+}
+.fixed-size {
+    max-width: 200px;
+}
