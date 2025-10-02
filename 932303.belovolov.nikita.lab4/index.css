@@ -1,0 +1,141 @@
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeef0;
+}
+* {
+    font-family: Arial;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: 28px;
+    background-color: #507299;
+    padding: 5px 0 5px 10vw;
+}
+footer {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    color: #808080;
+    padding: 5px;
+    font-size: small;
+}
+#langSelection {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: smaller;
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.btn {
+    color: #507299;
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    margin: 0 auto;
+    flex: 1;
+}
+#menu {
+    width: 200px;
+    flex-shrink: 0;
+}
+#menu > div {
+    margin: 10px 0;
+    padding: 5px;
+}
+#menu > div:hover {
+    background-color: #e1e5eb;
+}
+#feed {
+    flex: 1;
+    margin: 10px;
+}
+#additionalContainer {
+    display: none;
+    width: 140px;
+    height: fit-content;
+    position: sticky;
+    /* Header image + header paddings + additional container margin */
+    top: calc(28px + 10px + 10px);
+}
+
+.post {
+    max-width: 400px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #cdcdcd;
+}
+.post:not(:first-child) {
+    margin-top: 10px;
+}
+.post-content > img {
+    max-width: 100%;
+    height: auto;
+}
+.post-content::selection {
+    color: #008049;
+    background: #e0e4ea;
+}
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 2px solid #cdcdcd;
+}
+
+.additional {
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #cdcdcd;
+}
+.additional:not(:first-child) {
+    margin-top: 10px;
+}
+.additional p {
+    background-color: #edeef0;
+}
+.additional-header {
+    font-weight: bold;
+    margin: 8px;
+}
+
+@media (min-width: 925px) {
+    #main {
+        width: 900px;
+    }
+    #additionalContainer {
+        display: block;
+    }
+}
+@media (max-width: 650px) {
+    #main {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    #menu {
+        width: 100%;
+        text-align: center;
+    }
+    #menu > div {
+        display: inline-block;
+        margin: 10px;
+    }
+    #feed {
+        margin: auto;
+        padding-bottom: 10px;
+    }
+}
