@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <title>Frontend Task №6</title>
+    </head>
+    <body>
+        <div id="main">
+            <div class="btn-row">
+                <div class="btn" onclick="showOnlyLeft()">Левая колонка</div>
+                <div class="btn" onclick="showBoth()">Обе две</div>
+                <div class="btn" onclick="showOnlyRight()">Правая колонка</div>
+            </div>
+            <div class="container">
+                <div id="left" class="content">
+                    <img src="cat.jpg" alt="Cat Image" />
+                </div>
+                <div id="right" class="content">
+                    <img src="dog.jpg" alt="Dog Image" />
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
