@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+}
+
+#shapeCount {
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 185px;
+    text-align: left;
+    font-size: 14px;
+    background-color: white;
+}
+
+.shape-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.shape-btn {
+    padding: 4px 8px;
+    border: 1px solid #999;
+    background-color: rgb(231, 231, 231);
+    color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    min-width: 70px;
+    text-align: center;
+}
+
+.shape-btn:hover {
+    border-color: #007bff;
+    background-color: #f0f0f0;
+}
+
+.shape-btn.active {
+    border-color: #007bff;
+    background-color: #e0f0ff;
+}
+
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    opacity: 0.8;
+    box-sizing: border-box;
+}
+
+.shape.square,
+.shape.circle {
+    border: 2px solid #000;
+}
+
+.shape.triangle {
+    border: none;
+}
+
+.shape:hover {
+    transform: scale(1.05);
+}
+
+.square {
+    background-color: rgb(255, 26, 26);
+}
+
+.square.selected {
+    background-color: rgb(255, 255, 26);
+}
+
+.circle {
+    background-color: rgb(26, 141, 26);
+    border-radius: 50%;
+}
+
+.circle.selected {
+    background-color: rgb(255, 255, 26);
+}
+
+.shape.triangle svg polygon {
+    stroke: none;
+}
