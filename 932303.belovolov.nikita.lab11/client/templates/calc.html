@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block head %}
+<title>PassUsingJinja2 - Backend1</title>
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/calc.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>PassUsingJinja2</h1>
+<div>
+    <div><b>Rand Value First : {{ first_num }}</b></div>
+    <div><b>Rand Value Second : {{ second_num }}</b></div>
+    <div><b>Add : </b></div>
+    <div>{{ first_num }} + {{ second_num }} = {{ first_num + second_num }}</div>
+    <div><b>Sub : </b></div>
+    <div>{{ first_num }} - {{ second_num }} = {{ first_num - second_num }}</div>
+    <div><b>Mult : </b></div>
+    <div>{{ first_num }} * {{ second_num }} = {{ first_num * second_num }}</div>
+    <div><b>Div : </b></div>
+    {% if second_num != 0 %}
+    <div>
+        {{ first_num }} / {{ second_num }} = {{ first_num // second_num }}
+    </div>
+    {% else %}
+    <div>😎👍</div>
+    {% endif %}
+</div>
+{% endblock %}
