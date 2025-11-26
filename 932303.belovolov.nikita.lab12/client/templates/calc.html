@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block head %}
+<title>Calc - Backend2</title>
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/calc.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>PassUsingJinja2</h1>
+<div>
+    <form action="" method="POST">
+        <div>
+            <input type="number" name="first_number" required />
+        </div>
+        <div>
+            <select name="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div>
+            <input type="number" name="second_number" required />
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+    </form>
+</div>
+{% endblock %}

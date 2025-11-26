@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block head %}
+<title>Home Page - Backend2</title>
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/home.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>Form parameters parsing demo</h1>
+<div>
+    <ul>
+        <li><a href="/calc">Manual</a></li>
+    </ul>
+</div>
+{% endblock %}
